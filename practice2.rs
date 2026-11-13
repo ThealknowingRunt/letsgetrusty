@@ -1,9 +1,6 @@
 fn main() {
     #[derive(Debug)]      // this allows structs to be printed
-    struct Structureig(); /*
-                          even after derive(Debug) it doesnt work ig it needs some other import
-                          i did just print it with {} maybe thats why
-                          */
+    struct Structureig();
     println!("I am tryna print this struct: {:?}", Structureig());
 
     let c = vec![21, 5, 6778]; //for some reason derive(Debug) dosent work with vec
