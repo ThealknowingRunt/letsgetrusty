@@ -1,5 +1,13 @@
 Guys this repo will cover my progress but reason this is a public repo is that I also wanna encourage you to learn as well.
 
+whoever following this is advised to visit
+https://doc.rust-lang.org/stable/rust-by-example/index.html
+
+this docs will help you learn intricacies of the language
+but will not help with connecting the dots that well
+So, I made this repo to hopefully make it easier for anyone new
+
+
 In case you want to all you gotta do is---->
 1> pull request to edit as you like.
 2> write your own version and send it in for review.
