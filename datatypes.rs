@@ -30,4 +30,5 @@ fn main() {
         2u32 - 3,
         2i32 - 3
     ); // thats right u for whole number
+    let _m = 233i32;
 }
