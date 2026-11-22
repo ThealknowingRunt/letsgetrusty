@@ -19,6 +19,14 @@ struct Rectangle {
     p3: Coords,
     p4: Coords,
 }
+#[derive(Debug)]
+enum Block {
+    Name(String),
+    Plot,
+    Attributes,
+    Deaths(i32),
+    Age(i32),
+}
 
 fn main() {
     let building = Attributes {
@@ -44,4 +52,7 @@ fn main() {
     };
 
     println!("{:#?}\nyour plot looks ugly!!", plot);
+    let name = Block::Name(String::from("fblock"));
+    // let _area = Block::Plot(plot);
+    println!("here is the fblock ig: {:?}", name);
 }
