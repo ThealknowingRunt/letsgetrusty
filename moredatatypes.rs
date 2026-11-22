@@ -55,4 +55,5 @@ fn main() {
     let name = Block::Name(String::from("fblock"));
     // let _area = Block::Plot(plot);
     println!("here is the fblock ig: {:?}", name);
+    let _variable: i32 = 344;
 }
