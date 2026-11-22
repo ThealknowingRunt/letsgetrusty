@@ -30,5 +30,15 @@ fn main() {
         2u32 - 3,
         2i32 - 3
     ); // thats right u for whole number
-    let _m = 233i32;
+    let m = (2,3,"true",True);
+    println!("{} orignal tuple",m);
+    println!("{} reversed tuple",reverse(m));
+    // neat aye
+    let (z,x,c,v)= m;
+    //we can also assign each and every element
+    println!("{} {} {} {}", z,x,c,v);
+
+    let mut strayarray :[i32, 399] = [2, 399];
+    println!("{:?}", strayarray);
+    println!("{:?}and {:?}, {:?}", strayarray[5],strayarray[5].len(),strayarray[2 .. 16]);
 }
