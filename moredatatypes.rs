@@ -1,5 +1,4 @@
 #![allow(dead_code)]
-
 #[derive(Debug)] // #![drive(debug)] is not a thing why???????
 struct Attributes {
     corners: i32,
