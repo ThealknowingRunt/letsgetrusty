@@ -11,15 +11,17 @@ enum Btnpos {
     Bottomright(u32, u32, u32),
     Bottomleft(u32, u32, u32),
 }
+#[allow(dead_code)]
+#[derive(Default)]
 struct BtnposStruct {
-    Top: (u32, u32, u32),
-    Left: (u32, u32, u32),
-    Bottom: (u32, u32, u32),
-    Right: (u32, u32, u32),
-    Topleft: (u32, u32, u32),
-    Topright: (u32, u32, u32),
-    Bottomright: (u32, u32, u32),
-    Bottomleft: (u32, u32, u32),
+    top: Option<(u32, u32, u32)>,
+    left: Option<(u32, u32, u32)>,
+    bottom: Option<(u32, u32, u32)>,
+    right: Option<(u32, u32, u32)>,
+    topleft: Option<(u32, u32, u32)>,
+    topright: Option<(u32, u32, u32)>,
+    bottomright: Option<(u32, u32, u32)>,
+    bottomleft: Option<(u32, u32, u32)>,
 }
 
 fn main() {
@@ -61,7 +63,10 @@ fn main() {
         _ => println!("nothing really thats it "),
     }
     let enter = Btnpos::Right(0, 1, 0);
-    let esc = BtnposStruct(Topleft(1, 0, 0));
+    let esc = BtnposStruct {
+        topleft: Some((1, 0, 0)),
+        ..Default::default()
+    };
     println!("position of enter is {:?}", enter);
 
     match enter {
@@ -77,4 +82,11 @@ fn main() {
         }
         _ => println!("no order is accepted"),
     }
+    match esc {
+        BtnposStruct {
+            topleft: Some((1, 0, 0)),
+            ..
+        } => println!("look it works"),
+        _ => println!("look it doesn't work"),
+    };
 }
